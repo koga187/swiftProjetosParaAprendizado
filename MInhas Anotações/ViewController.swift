@@ -10,13 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var anotacaoTextField: UITextField!
-
+    @IBOutlet weak var anotacaoTextView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fundo")!)
+
+        anotacaoTextView.text = buscaAnotacoes()
 
     }
 
@@ -27,8 +27,19 @@ class ViewController: UIViewController {
 
 
     @IBAction func salvaNotaActionButton(_ sender: Any) {
-        print(anotacaoTextField)
-//        UserDefaults.standard.set(anotacaoTextField, forKey: "anotacao")
+        print(anotacaoTextView.text)
+        UserDefaults.standard.set(anotacaoTextView.text, forKey: "anotacao")
+    }
+
+    func buscaAnotacoes() -> String {
+
+        let anotacoes = UserDefaults.standard.object(forKey: "anotacao")
+        print(anotacoes!);
+        if anotacoes != nil {
+            return String(describing: anotacoes!)
+        }
+
+        return ""
     }
 
 
