@@ -34,10 +34,21 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWA-la-qEq">
-                                        <rect key="frame" x="0.0" y="134" width="321" height="187"/>
+                                        <rect key="frame" x="0.0" y="134" width="321" height="153"/>
                                         <state key="normal" image="botao_salvar"/>
                                         <connections>
                                             <action selector="salvaNotaActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="emM-Gf-Me9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHa-mN-oKv">
+                                        <rect key="frame" x="0.0" y="287" width="321" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Limpar">
+                                            <color key="titleColor" red="0.63507997989654541" green="0.63125282526016235" blue="0.48957693576812744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.055641964077949524" green="0.020074797794222832" blue="0.011670869775116444" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="apagaNotaActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FQG-i7-AeI"/>
                                         </connections>
                                     </button>
                                 </subviews>

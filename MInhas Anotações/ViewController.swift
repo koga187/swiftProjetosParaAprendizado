@@ -26,15 +26,21 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func apagaNotaActionButton(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "anotacao")
+        anotacaoTextView.text = "";
+    }
+
     @IBAction func salvaNotaActionButton(_ sender: Any) {
-        print(anotacaoTextView.text)
-        UserDefaults.standard.set(anotacaoTextView.text, forKey: "anotacao")
+        if let anotacaoText = anotacaoTextView.text {
+            UserDefaults.standard.set(anotacaoText, forKey: "anotacao")
+        }
     }
 
     func buscaAnotacoes() -> String {
 
         let anotacoes = UserDefaults.standard.object(forKey: "anotacao")
-        print(anotacoes!);
+
         if anotacoes != nil {
             return String(describing: anotacoes!)
         }
