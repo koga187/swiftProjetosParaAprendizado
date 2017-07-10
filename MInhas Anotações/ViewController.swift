@@ -10,14 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var anotacaoTextField: UITextField!
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fundo")!)
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+
+    @IBAction func salvaNotaActionButton(_ sender: Any) {
+        print(anotacaoTextField)
+//        UserDefaults.standard.set(anotacaoTextField, forKey: "anotacao")
     }
 
 
