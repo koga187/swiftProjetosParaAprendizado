@@ -35,6 +35,8 @@ class ViewController: UIViewController {
         if let anotacaoText = anotacaoTextView.text {
             UserDefaults.standard.set(anotacaoText, forKey: "anotacao")
         }
+
+        esconderTeclado()
     }
 
     func buscaAnotacoes() -> String {
@@ -46,6 +48,18 @@ class ViewController: UIViewController {
         }
 
         return ""
+    }
+
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        esconderTeclado()
+    }
+
+    func esconderTeclado () {
+        view.endEditing(true)
     }
 
 
