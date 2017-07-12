@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		D383C3BF1F141F72008DD768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D383C3BE1F141F72008DD768 /* AppDelegate.swift */; };
-		D383C3C11F141F72008DD768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D383C3C01F141F72008DD768 /* ViewController.swift */; };
+		D383C3C11F141F72008DD768 /* ViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = D383C3C01F141F72008DD768 /* ViewController .swift */; };
 		D383C3C41F141F72008DD768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D383C3C21F141F72008DD768 /* Main.storyboard */; };
 		D383C3C61F141F72008DD768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D383C3C51F141F72008DD768 /* Assets.xcassets */; };
 		D383C3C91F141F72008DD768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D383C3C71F141F72008DD768 /* LaunchScreen.storyboard */; };
+		D383C3D11F1424B0008DD768 /* TarefaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D383C3D01F1424B0008DD768 /* TarefaViewController.swift */; };
+		D383C3D31F1426EC008DD768 /* TarefaUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D383C3D21F1426EC008DD768 /* TarefaUserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D383C3BB1F141F72008DD768 /* Lista de Tarefa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lista de Tarefa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D383C3BE1F141F72008DD768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D383C3C01F141F72008DD768 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D383C3C01F141F72008DD768 /* ViewController .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController .swift"; sourceTree = "<group>"; };
 		D383C3C31F141F72008DD768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D383C3C51F141F72008DD768 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D383C3C81F141F72008DD768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D383C3CA1F141F72008DD768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D383C3D01F1424B0008DD768 /* TarefaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarefaViewController.swift; sourceTree = "<group>"; };
+		D383C3D21F1426EC008DD768 /* TarefaUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarefaUserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +58,10 @@
 		D383C3BD1F141F72008DD768 /* Lista de Tarefa */ = {
 			isa = PBXGroup;
 			children = (
+				D383C3D21F1426EC008DD768 /* TarefaUserDefaults.swift */,
 				D383C3BE1F141F72008DD768 /* AppDelegate.swift */,
-				D383C3C01F141F72008DD768 /* ViewController.swift */,
+				D383C3C01F141F72008DD768 /* ViewController .swift */,
+				D383C3D01F1424B0008DD768 /* TarefaViewController.swift */,
 				D383C3C21F141F72008DD768 /* Main.storyboard */,
 				D383C3C51F141F72008DD768 /* Assets.xcassets */,
 				D383C3C71F141F72008DD768 /* LaunchScreen.storyboard */,
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D383C3C11F141F72008DD768 /* ViewController.swift in Sources */,
+				D383C3C11F141F72008DD768 /* ViewController .swift in Sources */,
+				D383C3D31F1426EC008DD768 /* TarefaUserDefaults.swift in Sources */,
+				D383C3D11F1424B0008DD768 /* TarefaViewController.swift in Sources */,
 				D383C3BF1F141F72008DD768 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +310,7 @@
 				D383C3CF1F141F72008DD768 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
