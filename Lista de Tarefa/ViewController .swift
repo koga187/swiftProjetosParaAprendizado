@@ -43,8 +43,26 @@ class ViewController: UITableViewController {
 
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        popTabelaTarefa()
+        tableView.reloadData()
+    }
+
     func popTabelaTarefa() -> Void {
         let tarefaUserDefaults = TarefaUserDefaults()
         listaTarefa = tarefaUserDefaults.listarTarefas()
+    }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+
+        if editingStyle == UITableViewCellEditingStyle.delete {
+
+            let tarefaUserDefaults = TarefaUserDefaults()
+            tarefaUserDefaults.removerTarefa(indexPath.row)
+
+            popTabelaTarefa()
+            tableView.reloadData()
+        }
+
     }
 }

@@ -21,7 +21,9 @@ class TarefaUserDefaults {
 
     func listarTarefas() -> [String] {
 
-        if let listaTarefa = UserDefaults.standard.object(forKey: chaveListaTarefa) {
+        let listaTarefa = UserDefaults.standard.object(forKey: chaveListaTarefa)
+
+        if  listaTarefa != nil {
             return listaTarefa as! [String]
         }
 
@@ -29,7 +31,11 @@ class TarefaUserDefaults {
 
     }
 
-    func removerTarefa() {
+    func removerTarefa(_ key: Int) -> Void {
 
+        arrayTarefas = listarTarefas();
+        arrayTarefas.remove(at: key)
+
+        UserDefaults.standard.set(arrayTarefas, forKey: chaveListaTarefa)
     }
 }

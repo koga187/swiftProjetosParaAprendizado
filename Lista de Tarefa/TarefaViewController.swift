@@ -28,6 +28,18 @@ class TarefaViewController: UIViewController {
         if let tarefa = tarefaTextField.text {
             let tarefaUserDefaults = TarefaUserDefaults()
             tarefaUserDefaults.salvarTarefa(tarefa: tarefa)
+
+            let alertaController = UIAlertController(title: "Tarefa", message: "Tarefa adicionada com sucesso!", preferredStyle: .actionSheet)
+            let acaoConfirmar = UIAlertAction(title: "ok", style: .default	, handler: nil)
+
+            alertaController.addAction(acaoConfirmar)
+            present(alertaController, animated: true, completion: nil)
         }
+
+        tarefaTextField.text = ""
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true )
     }
 }
